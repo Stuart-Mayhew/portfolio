@@ -1,0 +1,122 @@
+/*Universal Rules*/
+html, body {
+  background-color: white;
+  font-size: 16px;
+  font-family: "Poppins", arial, sans-serif;
+  color: grey;
+
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  margin: 0;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-size: 0.75rem;
+  margin: 0;
+}
+h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+.title-container {
+  margin-left: 5rem;
+  width: 45%;
+}
+.title-container h1 {
+  color: blue;
+}
+
+/*navigation section*/
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 4px 2px lightgrey;
+  z-index: 4;
+}
+.logo {
+  margin-left: 5rem;
+  position: absolute;
+}
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+header .nav-link {
+  width: 5rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.2rem solid blue;
+  margin: 0 .2rem;
+  box-sizing: content-box;
+}
+header a {
+  z-index: 10
+  display: flex;
+  align-items: center;
+}
+header h3 {
+  width: 100%;
+  text-align: center;
+}
+
+/*navigation color slide on hover*/
+.slide {
+  position: absolute;
+  top: 2.5rem;
+  width: 5rem;
+  height: 0;
+  background-color: blue;
+  z-index: 5;
+  transition: all 1s ease-in-out;
+}
+.nav-link:hover .slide{
+  height: 2.5rem;
+  top: 0;
+}
+.nav-link:hover a {
+  color: white;
+  transition: all 0.75s ease-in-out;
+  z-index: 10;
+  text-decoration: none;
+}
+
+
+/*section for banner*/
+#banner {
+  position: relative;
+  height: 100vh;
+  margin-bottom;
+  display: flex;
+  align-items: center;
+}
+
+
+/*section for portfolio*/
+#portfolio {
+  position: relative;
+  height: 100vh;
+  top: 40px;
+  background-color: lightgrey;
+}
