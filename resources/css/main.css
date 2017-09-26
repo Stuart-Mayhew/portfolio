@@ -107,16 +107,88 @@ header h3 {
 #banner {
   position: relative;
   height: 100vh;
-  margin-bottom;
+  bottom: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1080px) {
+  #banner {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 }
 
+#portrait {
+  width: 25rem;
+  height: auto;
+  margin-right: 5rem;
+}
+@media only screen and (max-width: 1080px) {
+  #portrait {
+    margin: 0 0 2.5rem 0;
+  }
+}
 
 /*section for portfolio*/
 #portfolio {
   position: relative;
   height: 100vh;
-  top: 40px;
+
   background-color: lightgrey;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 850px) {
+  #portfolio {
+    height: inherit;
+    padding-bottom: 1rem;
+  }
+}
+
+#portfolio .title-container {
+  padding-top: 3rem;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  width: 100%;
+}
+@media only screen and (min-width: 1438px) {
+  #categories {
+    flex-direction: row;
+  }
+}
+.row {
+  width: 100%;
+  margin: 0;
+  display: flex;
+}
+@media only screen and (max-width: 850px) {
+  .row {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1438px) {
+  .row {
+    width: 50%;
+  }
+}
+.category {
+  width: 45%;
+  max-width: 362px;
+  background-color: white;
+  margin: 1rem;
+}
+@media only screen and (max-width: 850px) {
+  .category {
+    width: auto;
+    max-width: none;
+  }
+}
+@media only screen and (min-width: 1438px) {
+  .category {
+    max-width: none;
+  }
 }

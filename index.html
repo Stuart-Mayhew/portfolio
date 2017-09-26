@@ -15,15 +15,29 @@
 				let newHeight = $(window).height() - 40;
 				$(div).height(newHeight);
 			};
+			const categoryHeightAdjust = (div) => {
+				let newHeight = $(div).width();
+				if ($("#categories").css("flex-direction") == "column") {
+					$(div).height(newHeight);
+				} else {
+					let newWideHeight = $(window).height() - $(".title-container").height() - 32;
+					$(div).height(newWideHeight);
+				};
+			}
 
 			window.onload = function(){
-
 				containerHeightAdjust("#banner");
-				containerHeightAdjust("#portfolio");
-			};
+				if ($(window).width >= 850) {
+					containerHeightAdjust("#portfolio");
+				};
+				categoryHeightAdjust(".category");
+			}
 			window.onresize = function(){
 				containerHeightAdjust("#banner");
-				containerHeightAdjust("#portfolio");
+				if ($(window).width >= 850) {
+					containerHeightAdjust("#portfolio");
+				};
+				categoryHeightAdjust(".category");
 			}
 			//]]>
 		</script>
@@ -54,10 +68,21 @@
 				<h1>I'm Stuart,</h1>
 				<h2>a web designer who believes in creating elegant, user&#8209;friendly, and beautiful websites.</h2>
 			</div>
+			<img id="portrait" src="resources/img/portfolio-icon-1.png"/>
 		</div>
 		<div id="portfolio">
 			<div class="title-container" class="fluid-container">
 				<h1>Portfolio</h1>
+			</div>
+			<div id="categories">
+				<div class="row">
+					<div id="live-websites" class="category"></div>
+					<div id="practice-websites" class="category"></div>
+				</div>
+				<div class="row">
+					<div id="tools-websites" class="category"></div>
+					<div id="other-websites" class="category"></div>
+				</div>
 			</div>
 		</div>
 	</body>
