@@ -4,8 +4,8 @@ html, body {
   font-size: 16px;
   font-family: "Poppins", arial, sans-serif;
   color: grey;
-
 }
+
 
 a {
   text-decoration: none;
@@ -20,17 +20,37 @@ p {
   font-size: 0.75rem;
   margin: 0;
 }
+@media only screen and (max-width: 480px) {
+  p {
+    font-size: 0.5rem;
+  }
+}
 h1 {
   font-size: 4rem;
   margin: 0;
+}
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 h2 {
   font-size: 2rem;
   margin: 0;
 }
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
 h3 {
   font-size: 1rem;
   margin: 0;
+}
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 0.75rem;
+  }
 }
 .title-container {
   margin-left: 5rem;
@@ -49,12 +69,17 @@ nav {
   align-items: center;
   justify-content: space-between;
   background-color: white;
-  box-shadow: 0 0 4px 2px lightgrey;
+  box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
   z-index: 4;
 }
 .logo {
   margin-left: 5rem;
   position: absolute;
+}
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin-left: 1rem;
+  }
 }
 header {
   display: flex;
@@ -110,22 +135,39 @@ header h3 {
   bottom: 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 @media only screen and (max-width: 1080px) {
   #banner {
     flex-direction: column-reverse;
     justify-content: center;
   }
+  #banner .title-container {
+    margin-left: 2.5rem;
+    width: 60%;
+  }
 }
 
 #portrait {
-  width: 25rem;
+  width: 25%;
   height: auto;
   margin-right: 5rem;
 }
 @media only screen and (max-width: 1080px) {
   #portrait {
+    width: 30%;
+    margin: 0 0 2.5rem 0;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #portrait {
+    width: 40%;
+    margin: 0 0 2.5rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #portrait {
+    width: 50%;
     margin: 0 0 2.5rem 0;
   }
 }
@@ -155,7 +197,7 @@ header h3 {
   padding: 0 4rem;
   width: 100%;
 }
-@media only screen and (min-width: 1438px) {
+@media only screen and (min-width: 1280px) {
   #categories {
     flex-direction: row;
   }
@@ -170,14 +212,14 @@ header h3 {
     flex-direction: column;
   }
 }
-@media only screen and (min-width: 1438px) {
+@media only screen and (min-width: 1280px) {
   .row {
     width: 50%;
   }
 }
 .category {
-  width: 45%;
-  max-width: 362px;
+  width: 50%;
+  max-width: 340px;
   background-color: white;
   margin: 1rem;
 }
@@ -187,7 +229,7 @@ header h3 {
     max-width: none;
   }
 }
-@media only screen and (min-width: 1438px) {
+@media only screen and (min-width: 1280px) {
   .category {
     max-width: none;
   }
