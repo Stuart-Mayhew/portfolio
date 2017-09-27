@@ -136,51 +136,20 @@ header h3 {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-top: 40px;
 }
-@media only screen and (max-width: 1080px) {
-  #banner {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
-  #banner .title-container {
-    margin-left: 2.5rem;
-    width: 60%;
-  }
-}
-@media only screen and (max-height: 630px) {
-  #banner {
-    justify-content: flex-start;
-  }
-}
+
 #portrait {
   width: 25%;
   height: auto;
   margin-right: 5rem;
 }
-@media only screen and (max-width: 1080px) {
-  #portrait {
-    width: 30%;
-    margin: 0 0 2.5rem 0;
-  }
-}
-@media only screen and (max-width: 850px) {
-  #portrait {
-    width: 40%;
-    margin: 0 0 2.5rem 0;
-  }
-}
-@media only screen and (max-width: 500px) {
-  #portrait {
-    width: 50%;
-    margin: 0 0 2.5rem 0;
-  }
-}
+
 
 /*section for portfolio*/
 #portfolio {
   position: relative;
   height: 100vh;
-
   background-color: lightgrey;
   box-sizing: border-box;
 }

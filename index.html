@@ -11,11 +11,13 @@
 		crossorigin="anonymous"></script>
 		<script type="text/javascript">
 		//<![CDATA[
+			//adjusts section of choice's height to the screen height
 			const containerHeightAdjust = (div) => {
 				let newHeight = $(window).height();
 				$(div).height(newHeight);
 			};
-			const categoryHeightAdjust = (div) => {
+			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
+						const categoryHeightAdjust = (div) => {
 				let newHeight = $(div).width();
 				if ($("#categories").css("flex-direction") == "column") {
 					$(div).height(newHeight);
@@ -24,20 +26,38 @@
 					$(div).height(newWideHeight);
 				};
 			}
-
+			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
+			const bannerOrientation = () => {
+				if ($("#banner").height() > $("#banner").width()) {
+					$("#banner").css({"flex-direction": "column-reverse", "justify-content": "center"});
+					$("#portrait").css("margin","0 0 2.5rem 0");
+					let bannerTextWidth = $("#banner .title-container").width()
+					$("#portrait").width(bannerTextWidth)
+					$("#banner .title-container").css("margin","0")
+				} else {
+					$("#banner").css({"flex-direction": "row", "justify-content": "space-around"});
+					$("#portrait").css("margin","0 5rem 0 0");
+					$("#portrait").width("25%")
+					$("#banner .title-container").css("margin","0 0 0 5rem")
+				};
+			};
+			//activates function on website load
 			window.onload = function(){
 				containerHeightAdjust("#banner");
 				if ($(window).width >= 850) {
 					containerHeightAdjust("#portfolio");
 				};
 				categoryHeightAdjust(".category");
+				bannerOrientation();
 			}
+			//activates functions on screen resize
 			window.onresize = function(){
 				containerHeightAdjust("#banner");
 				if ($(window).width >= 850) {
 					containerHeightAdjust("#portfolio");
 				};
 				categoryHeightAdjust(".category");
+				bannerOrientation();
 			}
 			//]]>
 		</script>
