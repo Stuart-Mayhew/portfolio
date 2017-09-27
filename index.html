@@ -14,18 +14,38 @@
 			//adjusts section of choice's height to the screen height
 			const containerHeightAdjust = (div) => {
 				let newHeight = $(window).height() - 40;
-				$(div).height(newHeight);
+				if (div === "#portfolio") {
+					if ($(window).height() > $(window).width()) {
+						$(div).css("height", "auto");
+					} else {
+						$(div).height(newHeight);
+					}
+				} else {
+					$(div).height(newHeight);
+				}
+			};
+
+			const categoryWidthAdjust = () => {
+				if ($(window).height() > $(window).width()) {
+					$("#categories").css("flex-direction", "column");
+					$(".row").css({"flex-direction": "column", "width": "100%"});
+					$(".category").css("width", "auto");
+				} else {
+					$("#categories").css("flex-direction", "row");
+					$(".row").css({"flex-direction": "row", "width": "50%"});
+					$(".category").css("width", "50%");
+				};
 			};
 			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
-						const categoryHeightAdjust = (div) => {
+				const categoryHeightAdjust = (div) => {
 				let newHeight = $(div).width();
-				if ($("#categories").css("flex-direction") == "column") {
+				if ($(window).height() > $(window).width()) {
 					$(div).height(newHeight);
 				} else {
-					let newWideHeight = $(window).height() - $(".title-container").height() - 32;
+					let newWideHeight = $(window).height() - $(".title-container").height() - 40;
 					$(div).height(newWideHeight);
 				};
-			}
+			};
 			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
 			const bannerOrientation = () => {
 				if ($("#banner").height() > $("#banner").width()) {
@@ -44,18 +64,16 @@
 			//activates function on website load
 			window.onload = function(){
 				containerHeightAdjust("#banner");
-				if ($(window).width >= 850) {
-					containerHeightAdjust("#portfolio");
-				};
+				containerHeightAdjust("#portfolio");
+				categoryWidthAdjust();
 				categoryHeightAdjust(".category");
 				bannerOrientation();
 			}
 			//activates functions on screen resize
 			window.onresize = function(){
 				containerHeightAdjust("#banner");
-				if ($(window).width >= 850) {
-					containerHeightAdjust("#portfolio");
-				};
+				containerHeightAdjust("#portfolio");
+				categoryWidthAdjust();
 				categoryHeightAdjust(".category");
 				bannerOrientation();
 			}
