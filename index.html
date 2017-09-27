@@ -13,7 +13,7 @@
 		//<![CDATA[
 			//adjusts section of choice's height to the screen height
 			const containerHeightAdjust = (div) => {
-				let newHeight = $(window).height();
+				let newHeight = $(window).height() - 40;
 				$(div).height(newHeight);
 			};
 			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
