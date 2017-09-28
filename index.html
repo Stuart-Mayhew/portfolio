@@ -15,7 +15,8 @@
 			const containerHeightAdjust = (div) => {
 				let newHeight = $(window).height() - 40;
 				if (div === "#portfolio") {
-					if ($(window).height() > $(window).width()) {
+					if ($(window).height() < 750 ||
+					  $(window).height() > $(window).width()) {
 						$(div).css("height", "auto");
 					} else {
 						$(div).height(newHeight);
@@ -26,7 +27,7 @@
 			};
 			//changes content of #portfolio to landscape or portrait depending on orientation of screen
 			const categoryWidthAdjust = () => {
-				if ($(window).height() > $(window).width()) {
+				if ($(window).height() < 750 || $(window).height() > $(window).width()) {
 					$("#categories").css("flex-direction", "column");
 					$(".row").css({"flex-direction": "column", "width": "100%"});
 					$(".category").css("width", "auto");
