@@ -24,7 +24,7 @@
 					$(div).height(newHeight);
 				}
 			};
-
+			//changes content of #portfolio to landscape or portrait depending on orientation of screen
 			const categoryWidthAdjust = () => {
 				if ($(window).height() > $(window).width()) {
 					$("#categories").css("flex-direction", "column");
