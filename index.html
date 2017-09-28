@@ -47,7 +47,7 @@
 				if ($(window).height() > $(window).width()) {
 					$(div).height(newHeight);
 				} else {
-					let newWideHeight = $(window).height() - $(".title-container").height() - 10;
+					let newWideHeight = $(window).height() - $(".title-container").height() -$('#about-container').height() - 10;
 					$(div).height(newWideHeight);
 				};
 			};
