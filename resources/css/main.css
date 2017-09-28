@@ -20,11 +20,7 @@ p {
   font-size: 0.75rem;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  p {
-    font-size: 0.5rem;
-  }
-}
+
 h1 {
   font-size: 4rem;
   margin: 0;
@@ -55,6 +51,11 @@ h3 {
 .title-container {
   margin-left: 4.5rem;
   width: 45%;
+}
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  .title-container {
+    width: 60%;
+  }
 }
 .title-container h1 {
   color: blue;
@@ -126,6 +127,10 @@ header h3 {
   z-index: 10;
   text-decoration: none;
 }
+.nav-link a:focus {
+  text-decoration: none;
+  color: inherit;
+}
 
 
 /*section for banner*/
@@ -134,12 +139,15 @@ header h3 {
   align-items: center;
   justify-content: space-around;
 }
-
+#about-container p {
+  display: none;
+}
 #portrait {
   width: 25%;
   height: auto;
   margin-right: 5rem;
 }
+
 
 
 /*section for portfolio*/
@@ -154,12 +162,22 @@ header h3 {
 #portfolio .title-container {
   padding-top: 1rem;
 }
-
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  #portfolio .title-container {
+    margin-left: 2rem;
+  }
+}
 #categories {
   display: flex;
-  padding: 0 4rem 0 4rem;
+  padding: 0 4rem;
   width: 100%;
 }
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  #categories {
+    padding: 0 2rem;
+  }
+}
+
 .row {
   margin: 0;
   display: flex;
@@ -167,4 +185,7 @@ header h3 {
 .category {
   background-color: white;
   margin: 0.5rem;
+}
+#other-websites {
+  margin-bottom: 1rem;
 }
