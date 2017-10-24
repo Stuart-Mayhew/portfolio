@@ -47,7 +47,7 @@
 				<h1>Portfolio</h1>
 			</div>
 			<div id="categories">
-				<div class="row">
+				<div class="row row-one">
 					<!--<div id="live" class="category"></div>-->
 					<div id="practice" class="category">
 						<div class="portfolio-images">
@@ -61,7 +61,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row row-two">
 					<div id="other-coding" class="category"></div>
 					<div id="other-design" class="category"></div>
 				</div>
@@ -92,14 +92,20 @@
 			};
 			//changes content of #portfolio to landscape or portrait depending on orientation of screen
 			const categoryWidthAdjust = () => {
-				if ($(window).height() <= 750 || $(window).height() > $(window).width()) {
+				if ($(window).height() > $(window).width()) {
 					$("#categories").css("flex-direction", "column");
 					$(".row").css({"flex-direction": "column", "width": "100%"});
 					$(".category").css("width", "auto");
-				} else {
+				} else if ($(window).height() <= 750) {
+					$("#categories").css("flex-direction", "column");
+					$(".row").css({"flex-direction": "row", "width": "100%"});
+					$(".category").css("width", "50%");
+					$('#practice').css("width", "100%");
+				}	else {
 					$("#categories").css("flex-direction", "row");
 					$(".row").css({"flex-direction": "row", "width": "50%"});
-					$(".category").css("width", "50%");
+					$(".row-two").css("flex-direction","column");
+					$(".category").css("width", "100%");
 					$('#practice').css("width", "100%");
 				};
 			};
@@ -108,22 +114,25 @@
 				let newHeight = $(div).width();
 				if ($(window).height() > $(window).width()) { //makes .category a square
 					$(div).height(newHeight);
+					$('.row').height("auto");
 					$('.slick-prev').css('left','-2rem')
 					$('.slick-next').css('right','-2rem')
-					$('.portfolio-images').css('border-right','0');
+					$('.portfolio-images').css({'border-right':'0','border-bottom': '0'});
 				} else if ($(window).height() <= 750) { //makes .category a square that is half the height of the row and half the width of the screen
 					$(div).height(newHeight / 2);
-					$('#practice').height(newHeight + 16);
-					$(".row").css("width","50%");
-					$("#categories").css("flex-direction","row");
+					$('.row').height("auto");
+					$(".row").css("width","100%");
+					$("#categories").css("flex-direction","column");
 					$('.slick-prev').css('left','1rem');
 					$('.slick-next').css('right','1rem');
-					$('.portfolio-images').css('border-right','0');
+					$('.portfolio-images').css({'border-right':'1rem lightgrey solid','border-bottom': '0'});
 				} else { //makes .category columns that take up the height of the row
-					$(div).height("80vh");
+					$('.row').height("80vh");
+					$(div).height("50%");
+					$('#practice').height("100%");
 					$('.slick-prev').css('left','1rem');
 					$('.slick-next').css('right','1rem');
-					$('.portfolio-images').css('border-right','1rem lightgrey solid');
+					$('.portfolio-images').css({'border-right':'1rem lightgrey solid','border-bottom': '1rem lightgrey solid'});
 				};
 			};
 			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/

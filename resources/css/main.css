@@ -45,7 +45,7 @@ h3 {
 }
 @media only screen and (max-width: 480px), only screen and (max-height: 750px) {
   h3 {
-    font-size: 0.5rem;
+    font-size: 1rem;
   }
 }
 .title-container {
@@ -59,7 +59,7 @@ h3 {
 }
 .title-container h1 {
   color: blue;
-  margin-left: 0.5rem;
+
 }
 
 /*navigation section*/
@@ -169,6 +169,9 @@ header h3 {
     margin-left: 2rem;
   }
 }
+#portfolio .title-container h1{
+  margin-left: 0.5rem;
+}
 #categories {
   display: flex;
   padding: 0 4rem;
@@ -183,6 +186,7 @@ header h3 {
 .row {
   margin: 0;
   display: flex;
+  overflow: hidden;
 }
 .category {
   background-color: white;
@@ -193,6 +197,7 @@ header h3 {
   width: 100%;
   background-color: lightgrey;
   border-right: 1rem lightgrey solid;
+  border-bottom: 1rem lightgrey solid;
 }
 
 .slick-slider, .slick-list, .slick-track {
