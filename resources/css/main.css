@@ -59,6 +59,7 @@ h3 {
 }
 .title-container h1 {
   color: blue;
+  margin-left: 0.5rem;
 }
 
 /*navigation section*/
@@ -139,6 +140,7 @@ header h3 {
   align-items: center;
   justify-content: space-around;
 }
+
 #about-container p {
   display: none;
 }
@@ -186,6 +188,37 @@ header h3 {
   background-color: white;
   margin: 0.5rem;
 }
-#other-websites {
-  margin-bottom: 1rem;
+
+.portfolio-images {
+  width: 100%;
+  background-color: lightgrey;
+  border-right: 1rem lightgrey solid;
+}
+
+.slick-slider, .slick-list, .slick-track {
+  height: 100%;
+}
+
+.slick-slide {
+  margin: 0 0.5rem;
+}
+
+.slick-prev {
+  z-index: 1000;
+  top: 40%;
+}
+.slick-prev:before {
+  color: blue;
+}
+.slick-next {
+  z-index: 1000;
+  top: 40%;
+}
+.slick-next:before {
+  color: blue;
+}
+
+.image {
+  height: 100%;
+  width: auto;
 }

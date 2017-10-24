@@ -2,117 +2,13 @@
 <html>
 	<head>
 		<title>Stuart Mayhew | Home</title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="resources/css/reset.css"/>
 		<link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="resources/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="./resources/slick/slick-theme.css"/>
 		<link rel="stylesheet" href="resources/css/main.css"/>
-		<script src="https://use.fontawesome.com/5357d5ad66.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js
-" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js" type="text/javascript"></script>
-		<script type="text/javascript">
-		//<![CDATA[
-			//adjusts section of choice's height to the screen height
-			const containerHeightAdjust = (div) => {
-				let newHeight = $(window).height() - 40;
-				if (div === "#portfolio") {
-					if ($(window).height() < 750 ||
-					  $(window).height() > $(window).width()) {
-						$(div).css("height", "auto");
-					} else {
-						$(div).height(newHeight);
-					}
-				} else {
-					$(div).height(newHeight);
-				}
-			};
-			//changes content of #portfolio to landscape or portrait depending on orientation of screen
-			const categoryWidthAdjust = () => {
-				if ($(window).height() < 750 || $(window).height() > $(window).width()) {
-					$("#categories").css("flex-direction", "column");
-					$(".row").css({"flex-direction": "column", "width": "100%"});
-					$(".category").css("width", "auto");
-				} else {
-					$("#categories").css("flex-direction", "row");
-					$(".row").css({"flex-direction": "row", "width": "50%"});
-					$(".category").css("width", "50%");
-				};
-			};
-			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
-				const categoryHeightAdjust = (div) => {
-				let newHeight = $(div).width();
-				if ($(window).height() > $(window).width()) {
-					$(div).height(newHeight);
-				} else {
-					let newWideHeight = $(window).height() - $(".title-container").height() -$('#about-container').height() - 10;
-					$(div).height(newWideHeight);
-				};
-			};
-			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
-			const bannerOrientation = () => {
-				if ($("#banner").height() > $("#banner").width()) {
-					$("#banner").css({"flex-direction": "column-reverse", "justify-content": "center"});
-					$("#portrait").css("margin","0 0 2.5rem 0");
-					let bannerTextWidth = $("#banner .title-container").width()
-					$("#portrait").width(bannerTextWidth)
-					$("#banner .title-container").css("margin","0")
-				} else {
-					$("#banner").css({"flex-direction": "row", "justify-content": "space-around"});
-					$("#portrait").css("margin","0 5rem 0 0");
-					$("#portrait").width("25%")
-					$("#banner .title-container").css("margin","0 0 0 5rem")
-				};
-			};
-			//toggles showing of about text in banner, #portrait dissappears if screen is in portrait mode
-			$(function() {
-				$('.fa-chevron-down').click(function() {
-					$(this).toggleClass("fa-chevron-down fa-chevron-up");
-					$(this).parent().find("p").slideToggle(400);
-					if ($("#banner").height() > $("#banner").width()) {
-						$('#portrait').toggle(400);
-					};
-				});
-			});
-			//activates slow scroll (uses plugins)
-			$(function() {
-   			$('nav').localScroll({duration:800});
-			});
-
-			$(function() {
-				$('#about-link').click(function() {
-					if ($('#about-chevron').hasClass('fa-chevron-down')) {
-						$('#about-chevron').toggleClass('fa-chevron-down fa-chevron-up');
-						$('#about-chevron').parent().find("p").delay(400).slideToggle(800);
-						if ($("#banner").height() > $("#banner").width()) {
-							$('#portrait').delay(400).toggle(800);
-					};
-				} else {
-					$('#about-container').fadeTo(400,0.1).fadeTo(400,1).fadeIn(400);
-				};
-			});
-			});
-
-			//activates function on website load
-			window.onload = function(){
-				containerHeightAdjust("#banner");
-				containerHeightAdjust("#portfolio");
-				categoryWidthAdjust();
-				categoryHeightAdjust(".category");
-				bannerOrientation();
-			}
-			//activates functions on screen resize
-			window.onresize = function(){
-				containerHeightAdjust("#banner");
-				containerHeightAdjust("#portfolio");
-				categoryWidthAdjust();
-				categoryHeightAdjust(".category");
-				bannerOrientation();
-			}
-			//]]>
-		</script>
 	</head>
 	<body>
 		<nav>
@@ -152,14 +48,171 @@
 			</div>
 			<div id="categories">
 				<div class="row">
-					<div id="live-websites" class="category"></div>
-					<div id="practice-websites" class="category"></div>
+					<!--<div id="live" class="category"></div>-->
+					<div id="practice" class="category">
+						<div class="portfolio-images">
+							<img  class="image" id="colmar" src="./resources/img/website-sample-img/final/colmar-academy.jpg"/>
+							<img class="image" id="dasmatos" src="./resources/img/website-sample-img/final/dasmotos.jpg"/>
+							<img class="image" id="destination" src="./resources/img/website-sample-img/final/destination.jpg"/>
+							<img class="image" id="excursion" src="./resources/img/website-sample-img/final/excursion.jpg"/>
+							<img class="image" id="my-times" src="./resources/img/website-sample-img/final/my-times.jpg"/>
+							<img class="image" id="tea-cozy" src="./resources/img/website-sample-img/final/tea-cozy.jpg"/>
+							<img class="image" id="tortoiseshell-optics" src="./resources/img/website-sample-img/final/tortoiseshell-optics.jpg"/>
+						</div>
+					</div>
 				</div>
 				<div class="row">
-					<div id="tools-websites" class="category"></div>
-					<div id="other-websites" class="category"></div>
+					<div id="other-coding" class="category"></div>
+					<div id="other-design" class="category"></div>
 				</div>
 			</div>
 		</div>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 	crossorigin="anonymous"></script>
+		<script src="./resources/js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="https://use.fontawesome.com/5357d5ad66.js"></script>
+    <script type="text/javascript" src="./resources/slick/slick.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			//adjusts section of choice's height to the screen height
+			const containerHeightAdjust = (div) => {
+				let newHeight = $(window).height() - 40;
+				if (div === "#portfolio") {
+					if ($(window).height() < 750 ||
+					  $(window).height() > $(window).width()) {
+						$(div).css("height", "auto");
+					} else {
+						$(div).height(newHeight);
+					}
+				} else {
+					$(div).height(newHeight);
+				}
+			};
+			//changes content of #portfolio to landscape or portrait depending on orientation of screen
+			const categoryWidthAdjust = () => {
+				if ($(window).height() <= 750 || $(window).height() > $(window).width()) {
+					$("#categories").css("flex-direction", "column");
+					$(".row").css({"flex-direction": "column", "width": "100%"});
+					$(".category").css("width", "auto");
+				} else {
+					$("#categories").css("flex-direction", "row");
+					$(".row").css({"flex-direction": "row", "width": "50%"});
+					$(".category").css("width", "50%");
+					$('#practice').css("width", "100%");
+				};
+			};
+			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
+				const categoryHeightAdjust = (div) => {
+				let newHeight = $(div).width();
+				if ($(window).height() > $(window).width()) { //makes .category a square
+					$(div).height(newHeight);
+					$('.slick-prev').css('left','-2rem')
+					$('.slick-next').css('right','-2rem')
+					$('.portfolio-images').css('border-right','0');
+				} else if ($(window).height() <= 750) { //makes .category a square that is half the height of the row and half the width of the screen
+					$(div).height(newHeight / 2);
+					$('#practice').height(newHeight + 16);
+					$(".row").css("width","50%");
+					$("#categories").css("flex-direction","row");
+					$('.slick-prev').css('left','1rem');
+					$('.slick-next').css('right','1rem');
+					$('.portfolio-images').css('border-right','0');
+				} else { //makes .category columns that take up the height of the row
+					$(div).height("80vh");
+					$('.slick-prev').css('left','1rem');
+					$('.slick-next').css('right','1rem');
+					$('.portfolio-images').css('border-right','1rem lightgrey solid');
+				};
+			};
+			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
+			const bannerOrientation = () => {
+				if ($("#banner").height() > $("#banner").width()) {
+					$("#banner").css({"flex-direction": "column-reverse", "justify-content": "center"});
+					$("#portrait").css("margin","0 0 2.5rem 0");
+					let bannerTextWidth = $("#banner .title-container").width()
+					$("#portrait").width(bannerTextWidth)
+					$("#banner .title-container").css("margin","0")
+					//ensures that #portrait toggles correctly on transition from landscape to portrait views
+					if ($('#about-chevron').hasClass('fa-chevron-up')) {
+						$('#portrait').css('display','none');
+					};
+				} else {
+					$("#banner").css({"flex-direction": "row", "justify-content": "space-around"});
+					$("#portrait").css({"margin":"0 5rem 0 0","display":"block"});
+					$("#portrait").width("25%")
+					$("#banner .title-container").css("margin","0 0 0 5rem")
+				};
+			};
+			//toggles showing of about text in banner, direction of chevron, and #portrait dissappears if screen is in portrait mode
+			$(document).ready(function(){
+				$(function() {
+					$('.fa-chevron-down').click(function() {
+						$(this).toggleClass("fa-chevron-down fa-chevron-up");
+						$(this).parent().find("p").slideToggle(400);
+						if ($("#banner").height() > $("#banner").width()) {
+							$('#portrait').toggle(400);
+						};
+					});
+				});
+			});
+			//activates slow scroll (uses plugins)
+			$(document).ready(function(){
+				$(function() {
+	   			$('nav').localScroll({duration:800});
+				});
+			});
+			//extends about-container in the banner and changes the chevron direction when the about link in the nav bar is clicked
+			$(document).ready(function(){
+				$(function() {
+					$('#about-link').click(function() {
+						if ($('#about-chevron').hasClass('fa-chevron-down')) {
+							$('#about-chevron').toggleClass('fa-chevron-down fa-chevron-up');
+							$('#about-chevron').parent().find("p").delay(400).slideToggle(800);
+							if ($("#banner").height() > $("#banner").width()) {
+								$('#portrait').delay(400).toggle(800);
+							};
+						} else {
+							$('#about-container').fadeTo(400,0.1).fadeTo(400,1).fadeIn(400);
+						};
+					});
+				});
+			});
+
+			$(document).ready(function(){
+				$('.portfolio-images').slick({
+	        infinite: true,
+	        slidesToShow: 1,
+	        slidesToScroll: 1,
+	        speed: 2000,
+					variableWidth: true,
+					cssEase: 'ease-in-out',
+					centerMode: true,
+					slidesToShow: 1
+	      });
+	    });
+
+
+
+			//activates function on website load
+			window.onload = function(){
+				containerHeightAdjust("#banner");
+				containerHeightAdjust("#portfolio");
+				categoryWidthAdjust();
+				categoryHeightAdjust(".category");
+				bannerOrientation();
+
+			};
+			//activates functions on screen resize
+			window.onresize = function(){
+				containerHeightAdjust("#banner");
+				containerHeightAdjust("#portfolio");
+				categoryWidthAdjust();
+				categoryHeightAdjust(".category");
+				bannerOrientation();
+			};
+			//]]>
+		</script>
 	</body>
 </html>
