@@ -1,0 +1,29 @@
+- image overlay
+	- image-overlay background is the same color as the categories background - blends in too much
+	- chevron for expanded text flips incorrectly when hidden by event listener
+		- unsure how to reproduce
+
+- slick
+	- slick arrows occasionally appearing in portrait mode
+		- unsure how to reproduce
+
+- font
+	- font not yet selected
+	- font color not final
+
+- theme
+	- colors not final
+
+- nav
+	- logo needs making
+
+- about
+	- add cv intro text into expanded about section
+	- add picture to #portrait (not a zombie)
+
+- portfolio
+	- add descriptive text
+	- make links to github work
+	- make links to code repository work
+	
+

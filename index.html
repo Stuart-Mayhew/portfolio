@@ -11,26 +11,46 @@
 		<link rel="stylesheet" href="resources/css/main.css"/>
 	</head>
 	<body>
-		<nav>
+		<nav id="nav">
 			<div class="logo">
 				<a href="#banner"><h3>SM</h3></a>
 			</div>
 			<header>
 				<div class="nav-link">
-					<a href="#portfolio"><h3>Portfolio</h3></a>
-					<div class="slide"></div>
-				</div>
-				<div class="nav-link">
 					<a id="about-link" href="#banner"><h3>About</h3></a>
 					<div class="slide"></div>
 				</div>
-
 				<div class="nav-link">
-					<a href="#"><h3>Contact</h3></a>
+					<a id="portfolio-link" href="#portfolio"><h3>Portfolio</h3></a>
+					<div class="slide"></div>
+				</div>
+				<div class="nav-link">
+					<a id="contact-link" href="#nav"><h3>Contact</h3></a>
 					<div class="slide"></div>
 				</div>
 			</header>
 		</nav>
+		<div id="contact">
+
+			<div id="contact-container">
+				<div class="contact-link" id="github">
+					<h3 class="left-break">Github</h3>
+					<h3 class="link-break"> | </h3>
+					<h3 class="right-break">
+						<a href='https://github.com/Stuart-Mayhew' target="_blank">github.com/Stuart-Mayhew</a>
+					</h3>
+				</div>
+				<div class="contact-link" id='email'>
+					<h3 class="left-break">Email</h3>
+					<h3 class="link-break"> | </h3>
+					<h3 class="right-break">
+						<a href='mailto:stuart.r.mayhew@gmail.com'>stuart.r.mayhew@gmail.com</a>
+					</h3>
+				</div>
+			</div>
+			<div id="contact-close" class="fa fa-chevron-up"><a href="#nav"></a></div>
+
+		</div>
 		<div id="banner" class="fluid-container">
 			<div class="title-container">
 				<h1>I'm Stuart,</h1>
@@ -261,33 +281,56 @@
 				if ($("#banner").height() > $("#banner").width()) {
 					$("#banner").css({"flex-direction": "column-reverse", "justify-content": "center"});
 					$("#portrait").css("margin","0 0 2.5rem 0");
-					let bannerTextWidth = $("#banner .title-container").width()
-					$("#portrait").width(bannerTextWidth)
-					$("#banner .title-container").css("margin","0")
+					let bannerTextWidth = $("#banner .title-container").width();
+					$("#portrait").width(bannerTextWidth);
+					$("#banner .title-container").css("margin","0");
 					//ensures that #portrait toggles correctly on transition from landscape to portrait views
 					if ($('#about-chevron').hasClass('fa-chevron-up')) {
 						$('#portrait').css('display','none');
+					} else if ($('#about-chevron').hasClass('fa-chevron-down') && $(window).height() <= 575) {
+						$('#portrait').css('display','none');
+					} else if ($('#about-chevron').hasClass('fa-chevron-down') && $(window).height() > 575) {
+						$('#portrait').css('display','block');
 					};
 				} else {
 					$("#banner").css({"flex-direction": "row", "justify-content": "space-around"});
 					$("#portrait").css({"margin":"0 5rem 0 0","display":"block"});
-					$("#portrait").width("25%")
-					$("#banner .title-container").css("margin","0 0 0 5rem")
+					$("#portrait").width("25%");
+					$("#banner .title-container").css("margin","0 0 0 5rem");
 				};
+			};
+			//resets width of overlays when switching views/window resolution
+			const overlaySizeReset = ($overlay) => {
+				$($overlay).width('auto');
+				$($overlay).height('auto');
 			};
 
 
 			//toggles showing of about text in banner, direction of chevron, and #portrait dissappears if screen is in portrait mode
 			$(document).ready(function(){
 				$(function() {
+					$('#contact-link, #contact-close').click(function() {
+						$('#contact').slideToggle(250)
+					});
+				});
+				$(function() {
 					$('#about-chevron').click(function() {
-						$(this).toggleClass("fa-chevron-down fa-chevron-up");
-						$(this).parent().find("p").slideToggle(400);
-						if ($("#banner").height() > $("#banner").width()) {
-							$('#portrait').toggle(400);
+						if ($(this).hasClass('fa-chevron-down')) {
+							$(this).toggleClass("fa-chevron-down fa-chevron-up");
+							$(this).parent().find("p").slideToggle(400);
+							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575 && $('#portrait').css('display','block')) {
+								$('#portrait').toggle(400);
+							};
+						} else if ($(this).hasClass('fa-chevron-up')) {
+							$(this).toggleClass("fa-chevron-down fa-chevron-up");
+							$(this).parent().find("p").slideToggle(400);
+							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575 && $('#portrait').css('display','none')) {
+								$('#portrait').toggle(400);
+							};
 						};
 					});
 				});
+
 			//activates slow scroll (uses plugins)
 				$(function() {
 	   			$('nav').localScroll({duration:800});
@@ -298,7 +341,7 @@
 						if ($('#about-chevron').hasClass('fa-chevron-down')) {
 							$('#about-chevron').toggleClass('fa-chevron-down fa-chevron-up');
 							$('#about-chevron').parent().find("p").delay(400).slideToggle(800);
-							if ($("#banner").height() > $("#banner").width()) {
+							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575  && $('#portrait').css('display','block')) {
 								$('#portrait').delay(400).toggle(800);
 							};
 						} else {
@@ -316,8 +359,41 @@
 					centerMode: true,
 					lazyLoad: 'ondemand'
 	      });
-			//allows image-overlays to show on appropriate hover
 			$('.image-overlay').hide();
+			//listens for attribute changes
+			(function($) {
+				    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+				    $.fn.attrchange = function(callback) {
+				        if (MutationObserver) {
+				            var options = {
+				                subtree: false,
+				                attributes: true
+				            };
+
+				            var observer = new MutationObserver(function(mutations) {
+				                mutations.forEach(function(e) {
+				                    callback.call(e.target, e.attributeName);
+				                });
+				            });
+
+				            return this.each(function() {
+				                observer.observe(this, options);
+				            });
+
+				        }
+				    }
+				})(jQuery);
+
+				//listens to class changes on slick images and hides overlays when image no longer focused
+				$('.image').attrchange(function(attrName) {
+					let $hoverId = $(this).attr('id');
+			    if(attrName=='class'){
+						$('#' + $hoverId + '-overlay').hide(1500);
+					};
+				});
+			//allows image-overlays to show on appropriate hover
+
 			$('.image-overlay').hover(function() {
 				$(this).stop().toggle(250);
 			});
@@ -325,11 +401,16 @@
 				let $hoverId = $(this).attr('id');
 				$('#' + $hoverId + '-overlay').stop().toggle(250);
 			});
+			$('.image').mouseleave(function() {
+				let $hoverId = $(this).attr('id');
+				$('#' + $hoverId + '-overlay').hide();
+			});
 			$('.image-overlay').mouseleave(function() {
 				if($(this).find('i').hasClass('fa-chevron-up')) {
 					$(this).find('i').toggleClass("fa-chevron-down fa-chevron-up");
-					$(this).parent().find("p").slideToggle(0);
-				}
+					$(this).parent().find("p").hide();
+				};
+				$(this).hide();
 			});
 		//toggles showing of text on image overlays and direction of chevron
 			$(function() {
@@ -353,6 +434,7 @@
 				categoryWidthAdjust();
 				categoryHeightAdjust(".category");
 				bannerOrientation();
+				overlaySizeReset('.image-overlay, .image-overlay > *');
 			};
 			//activates functions on screen resize
 			window.onresize = function(){
@@ -361,6 +443,8 @@
 				categoryWidthAdjust();
 				categoryHeightAdjust(".category");
 				bannerOrientation();
+				overlaySizeReset('.image-overlay, .image-overlay > *');
+
 			};
 			//]]>
 		</script>
