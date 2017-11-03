@@ -295,15 +295,7 @@ header h3 {
   width: auto;
 }
 
-#contact {
-  display: none;
-  position: fixed;
-  margin-top: 40px;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
-  z-index: 999;
-}
+
 #contact-container {
   margin-top: 1rem;
   display: flex;
@@ -339,4 +331,13 @@ header h3 {
   float: right;
   bottom: 0.5rem;
   right: 0.5rem;
+}
+#contact {
+  display: none;
+  position: fixed;
+  margin-top: 40px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
+  z-index: 999;
 }
