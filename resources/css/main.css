@@ -41,12 +41,12 @@ h2 {
   }
 }
 h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 @media only screen and (max-width: 480px), only screen and (max-height: 750px) {
   h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 h4 {
@@ -82,7 +82,7 @@ nav {
   justify-content: space-between;
   background-color: white;
   box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
-  z-index: 1001;
+  z-index: 50;
 }
 .logo {
   margin-left: 4.5rem;
@@ -109,7 +109,7 @@ header .nav-link {
   box-sizing: content-box;
 }
 header a {
-  z-index: 10;
+  z-index: 45;
   display: flex;
   align-items: center;
 }
@@ -125,7 +125,7 @@ header h3 {
   width: 5rem;
   height: 0;
   background-color: blue;
-  z-index: 5;
+  z-index: 40;
   transition: all 1s ease-in-out;
 }
 .nav-link:hover .slide{
@@ -135,7 +135,7 @@ header h3 {
 .nav-link:hover a {
   color: white;
   transition: all 0.75s ease-in-out;
-  z-index: 10;
+  z-index: 45;
   text-decoration: none;
 }
 .nav-link a:focus {
@@ -202,13 +202,19 @@ header h3 {
   display: flex;
   overflow: hidden;
 }
+.row-two h3 {
+  font-weight: 500;
+}
+.row-two h4 {
+  margin-top: 0.25rem;
+}
 .category {
   background-color: white;
   border: 0.25rem solid grey;
 }
 .image-overlays {
   position: absolute;
-  z-index: 1000;
+  z-index: 25;
 }
 
 .image-overlay {
@@ -219,6 +225,7 @@ header h3 {
   flex-direction: column;
   background-color: darkgrey;
   padding: 0.25rem;
+  z-index: 25;
 }
 
 .image-overlay a {
@@ -229,6 +236,7 @@ header h3 {
 }
 .chevron-overlay-container {
   padding: 4px;
+  padding-top: 2px;
   position: relative;
   right: 4px;
   background-color: darkgrey;
@@ -236,12 +244,9 @@ header h3 {
 .fa-github {
   margin-left: 0.5rem;
 }
-.overlay-chevron {
-  padding-left: 4px;
-}
+
 .chevron-overlay-container p {
   display: none;
-
   padding: 0.25rem;
   padding-left: 4px;
 }
@@ -274,14 +279,14 @@ header h3 {
 }
 
 .slick-prev {
-  z-index: 1000;
+  z-index: 20;
   top: 50%;
 }
 .slick-prev:before {
   color: blue;
 }
 .slick-next {
-  z-index: 1000;
+  z-index: 20;
   top: 50%;
 }
 .slick-next:before {
@@ -293,12 +298,12 @@ header h3 {
   width: auto;
 }
 
-
 #contact-container {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .contact-link {
   margin: 0.5rem 0;
@@ -337,5 +342,5 @@ header h3 {
   width: 100%;
   background-color: white;
   box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
-  z-index: 999;
+  z-index: 30;
 }
