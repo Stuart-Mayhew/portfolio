@@ -1,7 +1,5 @@
 - image overlay
 	- image-overlay background is the same color as the categories background - blends in too much
-	- chevron for expanded text flips incorrectly when hidden by event listener
-		- unsure how to reproduce
 
 - slick
 	- slick arrows occasionally appearing in portrait mode

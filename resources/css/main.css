@@ -204,7 +204,7 @@ header h3 {
 }
 .category {
   background-color: white;
-  margin: 0.5rem;
+  border: 0.25rem solid grey;
 }
 .image-overlays {
   position: absolute;
@@ -219,7 +219,6 @@ header h3 {
   flex-direction: column;
   background-color: darkgrey;
   padding: 0.25rem;
-  border-radius: 0 0 0.5rem 0;
 }
 
 .image-overlay a {
@@ -231,7 +230,8 @@ header h3 {
 .chevron-overlay-container {
   padding: 4px;
   position: relative;
-  right: 8px;
+  right: 4px;
+  background-color: darkgrey;
 }
 .fa-github {
   margin-left: 0.5rem;
@@ -241,15 +241,13 @@ header h3 {
 }
 .chevron-overlay-container p {
   display: none;
-  background-color: darkgrey;
+
   padding: 0.25rem;
-  border-radius: 0 0 0.5rem 0;
   padding-left: 4px;
 }
 .portfolio-images {
   width: 100%;
   background-color: darkgrey;
-  border-right: 1rem darkgrey solid;
 }
 
 .slick-slide {
