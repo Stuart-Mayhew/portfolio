@@ -28,7 +28,6 @@ h1 {
 @media only screen and (max-width: 480px), only screen and (max-height: 750px) {
   h1 {
     font-size: 2.5rem;
-    margin-left: 0.25rem
   }
 }
 h2 {
@@ -91,6 +90,11 @@ nav {
 @media only screen and (max-width: 600px) {
   .logo {
     margin-left: 1rem;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .logo {
+    display: none;
   }
 }
 header {
@@ -178,14 +182,11 @@ header h3 {
 }
 @media only screen and (max-width: 480px), only screen and (max-height: 750px) {
   .title-container {
-    margin-left: 2rem;
+    margin-left: 1rem;
+    padding-top: 0.25rem;
   }
 }
-@media only screen and (min-width: 750px), only screen and (max-height: 750px) {
-  .title-container h1  {
-    margin-left: 0.25rem;
-  }
-}
+
 #categories {
   display: flex;
   padding: 0 4rem;

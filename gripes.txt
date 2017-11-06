@@ -24,4 +24,9 @@
 	- make links to github work
 	- make links to code repository work
 	
+- compatability
+	- excursion
+		- video not working on mobile
+	- overlay
+		- icons too small on mobile?
 

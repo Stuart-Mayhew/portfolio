@@ -241,21 +241,21 @@
 			//changes content of #portfolio to landscape or portrait depending on orientation of screen
 			const categoryWidthAdjust = () => {
 				if ($(window).height() > $(window).width()) {
-					$("#categories").css("flex-direction", "column");
+					$("#categories").css({"flex-direction":"column", "padding":"0"});
 					$(".row").css({"flex-direction": "column", "width": "100%"});
 					$(".row-two .category:first").css({"border-right":"0.25rem solid grey", "border-bottom":"0.25rem solid grey"});
 					$(".row-two .category:last").css({"border-left":"0.25rem solid grey"})
 					$(".category").css({"width": "auto","border-top":"0.125rem"});
 					$('#practice').css({"border-top":"0.25rem solid grey", "border-right":"0.25rem solid grey"});
 				} else if ($(window).height() <= 750) {
-					$("#categories").css("flex-direction", "column");
+					$("#categories").css({"flex-direction":"column", "padding":"0"});
 					$(".row").css({"flex-direction": "row", "width": "100%"});
 					$(".row-two .category:first").css({"border-right":"0.125rem solid grey", "border-bottom":"0.25rem solid grey"});
 					$(".row-two .category:last").css({"border-left":"0.125rem solid grey"})
 					$(".row-two .category").css({"width":"50%", "border-top":"0"});
 					$('#practice').css({"width": "100%", "border-right":"0.25rem solid grey"});
 				}	else {
-					$("#categories").css("flex-direction", "row");
+					$("#categories").css({"flex-direction":"row", "padding":"0 2rem"});
 					$(".row").css({"flex-direction": "row", "width": "50%"});
 					$(".row-two").css("flex-direction","column");
 					$(".row-two .category:first").css({"border-top":"0.25rem solid grey","border-right":"0.25rem solid grey","border-bottom":"0"});
