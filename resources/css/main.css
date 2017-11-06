@@ -3,19 +3,24 @@ html, body {
   background-color: white;
   font-size: 16px;
   font-family: "Poppins", arial, sans-serif;
-  color: grey;
+  color: #474B4F;
 }
-
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  html, body {
+    font-size: 13px;
+  }
+}
 
 a {
   text-decoration: none;
-  color: grey;
+  color: #474B4F;
   margin: 0;
 }
 a:hover {
   text-decoration: none;
   color: inherit;
 }
+
 p {
   font-size: 0.75rem;
   margin: 0;
@@ -25,51 +30,37 @@ h1 {
   font-size: 4rem;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-}
+
 h2 {
   font-size: 2rem;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-}
+
 h3 {
   font-size: 1.2rem;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  h3 {
-    font-size: 1.2rem;
-  }
-}
+
 h4 {
   font-size: 0.8rem;
   margin: 0;
 }
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  h4 {
-    font-size: 0.8rem;
-  }
-}
-#banner .title-container {
 
-  width: 45%;
+.title-container {
+  padding-top: 1rem;
+  margin-left: 4.25rem;
 }
 @media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  #banner .title-container {
-    width: 60%;
+  .title-container {
+    padding-top: 0.25rem;
+    margin-left: 1rem;
+
   }
 }
 .title-container h1 {
-  color: blue;
-
+  color: #285FA8;
 }
+
 
 /*navigation section*/
 nav {
@@ -79,10 +70,11 @@ nav {
   height: 40px;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
-  box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px rgba(60, 59, 69, 0.7);
   z-index: 50;
 }
+
 .logo {
   margin-left: 4.5rem;
   position: absolute;
@@ -97,6 +89,7 @@ nav {
     display: none;
   }
 }
+
 header {
   display: flex;
   justify-content: center;
@@ -104,12 +97,12 @@ header {
 }
 header .nav-link {
   width: 5rem;
-  height: 2.3rem;
+  height: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 0.2rem solid blue;
-  margin: 0 .2rem;
+  border-bottom: 2px solid #285FA8;
+  margin: 0 0.25rem;
   box-sizing: content-box;
 }
 header a {
@@ -125,19 +118,20 @@ header h3 {
 /*navigation color slide on hover*/
 .slide {
   position: absolute;
-  top: 2.5rem;
+  top: 40px;
   width: 5rem;
   height: 0;
-  background-color: blue;
+  background-color: #285FA8;
   z-index: 40;
   transition: all 1s ease-in-out;
 }
 .nav-link:hover .slide{
-  height: 2.5rem;
+  height: 40px;
   top: 0;
 }
+
 .nav-link:hover a {
-  color: white;
+  color: #fff;
   transition: all 0.75s ease-in-out;
   z-index: 45;
   text-decoration: none;
@@ -146,157 +140,15 @@ header h3 {
   text-decoration: none;
   color: inherit;
 }
-
-
-/*section for banner*/
-#banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-#about-container p {
+/*#contact rules*/
+#contact {
   display: none;
-}
-#portrait {
-  width: 25%;
-  height: auto;
-  margin-right: 5rem;
-}
-
-
-
-
-/*section for portfolio*/
-#portfolio {
-  position: relative;
-  height: inherit;
-  background-color: lightgrey;
-  box-sizing: border-box;
-  border-top: 40px solid white;
-}
-
-.title-container {
-  padding-top: 1rem;
-  margin-left: 4.25rem;
-}
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  .title-container {
-    margin-left: 1rem;
-    padding-top: 0.25rem;
-  }
-}
-
-#categories {
-  display: flex;
-  padding: 0 4rem;
+  position: fixed;
+  margin-top: 40px;
   width: 100%;
-}
-@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
-  #categories {
-    padding: 0 2rem;
-  }
-}
-
-.row {
-  margin: 0;
-  display: flex;
-  overflow: hidden;
-}
-.row-two h3 {
-  font-weight: 500;
-}
-.row-two h4 {
-  margin-top: 0.25rem;
-}
-.category {
-  background-color: white;
-  border: 0.25rem solid grey;
-}
-.image-overlays {
-  position: absolute;
-  z-index: 25;
-}
-
-.image-overlay {
-  position: absolute;
-  opacity: 0.8;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  background-color: darkgrey;
-  padding: 0.25rem;
-  z-index: 25;
-}
-
-.image-overlay a {
-  color: blue;
-}
-.image-overlay a:hover {
-  text-decoration: underline;
-}
-.chevron-overlay-container {
-  padding: 4px;
-  padding-top: 2px;
-  position: relative;
-  right: 4px;
-  background-color: darkgrey;
-}
-.fa-github {
-  margin-left: 0.5rem;
-}
-
-.chevron-overlay-container p {
-  display: none;
-  padding: 0.25rem;
-  padding-left: 4px;
-}
-.portfolio-images {
-  width: 100%;
-  background-color: darkgrey;
-}
-
-.slick-slide {
-  margin: 0 500px;
-}
-.slick-slider, .slick-list, .slick-track {
-  height: 100%;
-}
-
-.slick-initialized .slick-slide {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
-}
-.slick-initialized .slick-current {
-  visibility: visible;
-  opacity: 1;
-
-}
-.slick-initialized .slick-cloned {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.slick-prev {
-  z-index: 20;
-  top: 50%;
-}
-.slick-prev:before {
-  color: blue;
-}
-.slick-next {
-  z-index: 20;
-  top: 50%;
-}
-.slick-next:before {
-  color: blue;
-}
-
-.image {
-  height: 100%;
-  width: auto;
+  background-color: #fff;
+  box-shadow: 0 0 4px 2px rgba(60, 59, 69, 0.55);
+  z-index: 30;
 }
 
 #contact-container {
@@ -309,10 +161,7 @@ header h3 {
 .contact-link {
   margin: 0.5rem 0;
 }
-#email {
-  position: relative;
-  left: 10px;
-}
+
 .link-break {
   display: inline;
 }
@@ -336,12 +185,160 @@ header h3 {
   bottom: 0.5rem;
   right: 0.5rem;
 }
-#contact {
+
+
+/*#banner rules*/
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#banner .title-container {
+  width: 45%;
+}
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  #banner .title-container {
+    width: 60%;
+  }
+}
+
+#about-container p {
   display: none;
-  position: fixed;
-  margin-top: 40px;
+}
+
+#portrait {
+  width: 25%;
+  height: auto;
+  margin-right: 5rem;
+}
+
+/*section for portfolio*/
+#portfolio {
+  position: relative;
+  height: inherit;
+  background-color: #BBC5C9;
+  box-sizing: border-box;
+  border-top: 40px solid white;
+}
+
+#categories {
+  display: flex;
+  padding: 0 4rem;
   width: 100%;
-  background-color: white;
-  box-shadow: 0 0 4px 2px rgba(105,105,105,0.5);
-  z-index: 30;
+}
+@media only screen and (max-width: 480px), only screen and (max-height: 750px) {
+  #categories {
+    padding: 0 2rem;
+  }
+}
+
+.row {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.row-two h3 {
+  font-weight: 500;
+}
+.row-two h4 {
+  margin-top: 0.25rem;
+}
+.category {
+  background-color: #fff;
+  border: 0.5rem solid #BBC5C9;
+}
+/*overlay rules*/
+.image-overlays {
+  position: absolute;
+  z-index: 25;
+}
+
+.image-overlay {
+  position: absolute;
+  opacity: 0.9;
+  color: #1D1C21;
+  display: flex;
+  flex-direction: column;
+  background-color: #7E848C;
+  padding: 4px;
+  z-index: 25;
+}
+
+.image-overlay a {
+  color: #22518F;
+}
+.image-overlay a:hover {
+  text-decoration: underline;
+}
+
+.chevron-overlay-container {
+  padding: 4px;
+  padding-top: 2px;
+  position: relative;
+  right: 4px;
+  background-color: #7E848C;
+}
+
+.fa-github {
+  margin-left: 0.5rem;
+}
+
+.chevron-overlay-container p {
+  display: none;
+  padding: 0.25rem;
+  padding-left: 4px;
+}
+
+/*image carousel rules*/
+.portfolio-images {
+  width: 100%;
+  background-color: #3C3B45;
+}
+
+.slick-slide {
+  margin: 0 500px;
+}
+
+.slick-slider, .slick-list, .slick-track {
+  height: 100%;
+}
+
+.slick-initialized .slick-slide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slick-initialized .slick-current {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slick-initialized .slick-cloned {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.slick-prev {
+  z-index: 20;
+  top: 50%;
+}
+.slick-prev:before {
+  color: #22518F;
+}
+
+.slick-next {
+  z-index: 20;
+  top: 50%;
+}
+.slick-next:before {
+  color: #22518F;
+}
+
+.image {
+  height: 100%;
+  width: auto;
 }
