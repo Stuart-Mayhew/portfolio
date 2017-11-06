@@ -207,10 +207,11 @@ header h3 {
   display: none;
 }
 
-#portrait {
+#no-portrait {
   width: 25%;
   height: auto;
   margin-right: 5rem;
+  display: none;
 }
 
 /*section for portfolio*/
