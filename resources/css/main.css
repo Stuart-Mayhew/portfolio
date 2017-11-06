@@ -1,6 +1,6 @@
 /*Universal Rules*/
 html, body {
-  background-color: white;
+  background-color: #fff;
   font-size: 16px;
   font-family: "Poppins", arial, sans-serif;
   color: #474B4F;
@@ -303,23 +303,6 @@ header h3 {
 
 .slick-slider, .slick-list, .slick-track {
   height: 100%;
-}
-
-.slick-initialized .slick-slide {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
-}
-
-.slick-initialized .slick-current {
-  visibility: visible;
-  opacity: 1;
-}
-
-.slick-initialized .slick-cloned {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 1s ease-in-out, opacity 1s ease-in-out;
 }
 
 .slick-prev {
