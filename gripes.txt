@@ -1,17 +1,3 @@
-- image overlay
-	- image-overlay background is the same color as the categories background - blends in too much
-
-- slick
-	- slick arrows occasionally appearing in portrait mode
-		- unsure how to reproduce
-
-- font
-	- font not yet selected
-	- font color not final
-
-- theme
-	- colors not final
-
 - nav
 	- logo needs making
 
@@ -19,14 +5,9 @@
 	- add cv intro text into expanded about section
 	- add picture to #portrait (not a zombie)
 
-- portfolio
-	- add descriptive text
-	- make links to github work
-	- make links to code repository work
-	
+
 - compatability
 	- excursion
 		- video not working on mobile
-	- overlay
-		- icons too small on mobile?
 
+- icon needed

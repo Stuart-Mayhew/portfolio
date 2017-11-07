@@ -14,19 +14,19 @@
 	<body>
 		<nav id="nav">
 			<div class="logo">
-				<a href="#banner"><h3>SM</h3></a>
+				<a href="#banner"><h4>SM</h4></a>
 			</div>
 			<header>
 				<div class="nav-link">
-					<a id="about-link" href="#banner"><h3>About</h3></a>
+					<a id="about-link" href="#banner"><h4>About</h4></a>
 					<div class="slide"></div>
 				</div>
 				<div class="nav-link">
-					<a id="portfolio-link" href="#portfolio"><h3>Portfolio</h3></a>
+					<a id="portfolio-link" href="#portfolio"><h4>Portfolio</h4></a>
 					<div class="slide"></div>
 				</div>
 				<div class="nav-link">
-					<a id="contact-link" href="#nav"><h3>Contact</h3></a>
+					<a id="contact-link" href="#nav"><h4>Contact</h4></a>
 					<div class="slide"></div>
 				</div>
 			</header>
@@ -35,18 +35,18 @@
 
 			<div id="contact-container">
 				<div class="contact-link" id='email'>
-					<h3 class="left-break">Email</h3>
-					<h3 class="link-break"> | </h3>
-					<h3 class="right-break">
+					<h4 class="left-break">Email</h4>
+					<h4 class="link-break"> | </h4>
+					<h4 class="right-break">
 						<a href='mailto:stuart.r.mayhew@gmail.com'>stuart.r.mayhew@gmail.com</a>
-					</h3>
+					</h4>
 				</div>
 				<div class="contact-link" id="github">
-					<h3 class="left-break">Github</h3>
-					<h3 class="link-break"> | </h3>
-					<h3 class="right-break">
+					<h4 class="left-break">Github</h4>
+					<h4 class="link-break"> | </h4>
+					<h4 class="right-break">
 						<a href='https://github.com/Stuart-Mayhew' target="_blank">github.com/Stuart-Mayhew</a>
-					</h3>
+					</h4>
 				</div>
 			</div>
 			<div id="contact-close" class="fa fa-chevron-up fa-lg"><a href="#nav"></a></div>
@@ -68,6 +68,7 @@
 				<h1>Portfolio</h1>
 			</div>
 			<div id="categories">
+
 				<div class="row row-one">
 					<!--<div id="live" class="category"></div>-->
 					<div id="practice" class="category">
@@ -158,12 +159,12 @@
 					<div id="other-coding" class="category">
 						<div class="image-overlays">
 							<div id="match-game-overlay" class="image-overlay">
-								<h3>Coding - Personal&nbsp;Projects</h3>
-								<h4><a href="https://stuart-mayhew.github.io/match-game/" target="_blank">Match Game</a></h4>
+								<h3 class="small-overlay-text">Coding - Personal&nbsp;Projects</h3>
+								<h4 class="small-overlay-text"><a href="https://stuart-mayhew.github.io/match-game/" target="_blank">Match Game</a></h4>
 								<div class="chevron-overlay-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/match-game" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-									<p>A simple matching card game made as an exercise in javascript and jquery.</p>
+									<p class="small-overlay-text">A simple matching card game made as an exercise in javascript and jquery.</p>
 								</div>
 							</div>
 						</div>
@@ -273,21 +274,21 @@
 				if ($(window).height() > $(window).width()) { //makes .category a square
 					$(div).height(newHeight);
 					$('.row').height("auto");
-					$('.slick-prev').css('left','-2rem')
-					$('.slick-next').css('right','-2rem')
+					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-lg');
+					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-2x');
 				} else if ($(window).height() <= 750) { //makes .category a square that is half the height of the row and half the width of the screen
 					$(div).height(newHeight / 2);
 					$('.row').height("auto");
 					$(".row").css("width","100%");
 					$("#categories").css("flex-direction","column");
-					$('.slick-prev').css('left','1rem');
-					$('.slick-next').css('right','1rem');
+					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-lg');
+					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-2x');
 				} else { //makes .category columns that take up the height of the row
 					$('.row').height("80vh");
 					$(div).css("height","50%");
 					$('#practice').css("height","100%");
-					$('.slick-prev').css('left','1rem');
-					$('.slick-next').css('right','1rem');
+					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-2x');
+					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-lg');
 				};
 			};
 			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
@@ -399,7 +400,7 @@
 					variableWidth: true,
 					cssEase: 'ease-in-out',
 					centerMode: true,
-					lazyLoad: 'ondemand'
+					lazyLoad: 'ondemand',
 	      });
 			$('.image-overlay').hide();
 			//listens for attribute changes
