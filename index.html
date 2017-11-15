@@ -6,13 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
 		<link rel="stylesheet" href="resources/css/reset.css"/>
-		<link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="resources/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="resources/slick/slick-theme.css"/>
 		<link rel="stylesheet" href="resources/css/main.css"/>
 	</head>
 	<body>
-		<nav id="nav">
+    <nav id="nav">
 			<div class="logo">
 				<a href="#banner"><h4>SM</h4></a>
 			</div>
@@ -31,63 +28,70 @@
 				</div>
 			</header>
 		</nav>
-		<div id="contact">
-
-			<div id="contact-container">
-				<div class="contact-link" id='email'>
-					<h4 class="left-break">Email</h4>
-					<h4 class="link-break"> | </h4>
-					<h4 class="right-break">
-						<a href='mailto:stuart@stuartmayhew.com'>stuart@stuartmayhew.com</a>
-					</h4>
-				</div>
-				<div class="contact-link" id="github">
-					<h4 class="left-break">Github</h4>
-					<h4 class="link-break"> | </h4>
-					<h4 class="right-break">
-						<a href='https://github.com/Stuart-Mayhew' target="_blank">github.com/Stuart-Mayhew</a>
-					</h4>
-				</div>
-			</div>
-			<div id="contact-close" class="fa fa-chevron-up fa-lg"><a href="#nav"></a></div>
-
-		</div>
-		<div id="banner" class="fluid-container">
-			<div class="title-container">
-				<h1>I'm Stuart,</h1>
-				<h2>a web designer who believes in creating elegant, user&#8209;friendly, and beautiful websites.</h2>
-				<div id="about-container">
-					<i id="about-chevron" class="fa fa-chevron-down fa-2x" aria-hidden="true"></i>
-					<p>A midlands based creator with an education in product design. Through this, my experience in merchadising, and working with databases I was inspired to start coding. </br>I am currently working on personal projects
-in order to broaden my knowledge and; seeking a career in the industry. <p>
-				</div>
-			</div>
-			<!--<img id="no-portrait" src="resources/img/portfolio-icon-1.png"/>-->
-		</div>
-		<div id="portfolio">
-			<div class="title-container">
-				<h1>Portfolio</h1>
-			</div>
-			<div id="categories">
-
-				<div class="row row-one">
-					<!--<div id="live" class="category"></div>-->
-					<div id="practice" class="category">
-						<div class="image-overlays">
-							<div id="colmar-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/colmar-academy/" target="_blank">Colmar Academy</a></h3>
-								<div class="chevron-overlay-container">
+    <div id="banner">
+      <div class="full-screen-height flex container">
+        <div class="title-container">
+          <h1>I'm Stuart,</h1>
+          <h2>a web designer who believes in creating elegant, user&#8209;friendly, and beautiful websites.</h2>
+					<ul class="fa-ul"><li><i class="fa-li fa fa-chevron-right fa-lg"></i>
+						<h3>Bio</h3>
+						<ul class="fa-ul">
+							<li><i class="fa-li fa fa-angle-right"></i>
+								<p>A midlands based creator with an education in product design. Through this, my experience in merchadising, and working with databases I was inspired to start coding. I am currently working on personal projects in order to broaden my knowledge and; seeking a career in the industry.</p>
+							</li>
+						</ul>
+					</li>
+	          <li><i class="fa-li fa fa-chevron-right fa-lg"></i>
+							<h3>Skills</h3>
+							<ul class="fa-ul">
+								<li><i class="fa-li fa fa-angle-right"></i>
+									<li><i class="fa-li fa fa-angle-right"></i><p>HTML</p></li>
+			            <li><i class="fa-li fa fa-angle-right"></i><p>CSS</p></li>
+			            <li><i class="fa-li fa fa-angle-right"></i><p>JavaScript</p></li>
+			            <li><i class="fa-li fa fa-angle-right"></i><p>jQuery</p></li>
+									<li><i class="fa-li fa fa-angle-right"></i><p>Adobe Creative Suite</p></li>
+								</li>
+							</ul>
+						</li>
+					</ul>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio">
+      <div class="flex container">
+        <div class="title-container">
+          <h1>Portfolio</h1>
+        </div>
+        <div id="webpersonal" class="category flex full-height">
+					<h2 class="title-container">Web - Personal&nbsp;Projects</h2>
+					<div class="button-container flex">
+						<div id="colmar-button" class="button active"></div>
+						<div id="dasmotos-button" class="button"></div>
+						<div id="destination-button" class="button"></div>
+						<div id="excursion-button" class="button"></div>
+						<div id="mytimes-button" class="button"></div>
+						<div id="teacozy-button" class="button"></div>
+						<div id="tortoiseshell-button" class="button"></div>
+					</div>
+					<div id="webpersonal-projects" class="projects-container">
+            <div id="colmar" class="project-container flex full-height">
+							<div id="colmar-overlay" class="image-overlay display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/colmar-academy/" target="_blank">Colmar Academy</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/colmar-academy" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>A university landing page coded in html and css, with some javascript and jquery.</br>
 									This project was completed for the Codecademy Build Websites from Scratch course.</p>
 								</div>
 							</div>
-							<div id="dasmotos-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/Dasmotos/" target="_blank">Dasmoto's Arts &amp; Crafts</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container offset-right">
+								<img id="colmar-img" class="image onscreen" src="./resources/img/website-sample-img/colmar-academy.jpg"/>
+							</div>
+            </div>
+            <div id="dasmotos" class="project-container ">
+							<div id="dasmotos-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/Dasmotos/" target="_blank">Dasmoto's Arts &amp; Crafts</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/Dasmotos" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>Home page for an arts supplies store coded in html and css with javascript and jquery used for the menu bar and image carousels.</br>
@@ -95,383 +99,164 @@ in order to broaden my knowledge and; seeking a career in the industry. <p>
 									</p>
 								</div>
 							</div>
-							<div id="destination-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/destination/" target="_blank">Destination</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container offset-right">
+								<img id="dasmotos-img" class="image offscreen" src="./resources/img/website-sample-img/dasmotos.jpg"/>
+							</div>
+            </div>
+            <div id="destination" class="project-container ">
+							<div id="destination-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/destination/" target="_blank">Destination</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/destination" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>An article for travel news site Destination coded in html and css.</br>
 									The content of the article itself was originally completed for the Codecademy Build Websites from Scratch course, the wrapper of the Destination site was added at a later date to transform the exercise into something that felt like a news/blog site.</p>
 								</div>
 							</div>
-							<div id="excursion-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/excursion/" target="_blank">Excursion</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container flex  offset-right">
+								<img id="destination-img" class="image offscreen" src="./resources/img/website-sample-img/destination.jpg"/>
+							</div>
+            </div>
+            <div id="excursion" class="project-container ">
+							<div id="excursion-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/excursion/" target="_blank">Excursion</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/excursion"target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>Landing page for a new phone app with embedded video as part of the Codecademy Build Websites from Scratch course.</p>
 								</div>
 							</div>
-							<div id="my-times-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/MyTimes/" target="_blank">My Times</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container flex  offset-right">
+								<img id="excursion-img" class="image offscreen" 	src="./resources/img/website-sample-img/excursion.jpg"/>
+							</div>
+            </div>
+            <div id="mytimes" class="project-container">
+							<div id="mytimes-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/MyTimes/" target="_blank">My Times</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/MyTimes" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>A mock news site made to feel like a traditional newspaper.</br>
 									Made for the Codecademy Build Websites from Scratch course in order to practice image and text layouts.</p>
 								</div>
 							</div>
-							<div id="tea-cozy-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/tea-cozy/" target="_blank">Tea Cozy</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container flex offset-right">
+								<img id="mytimes-img" class="image offscreen" src="./resources/img/website-sample-img/my-times.jpg"/>
+							</div>
+            </div>
+            <div id="teacozy" class="project-container">
+							<div id="teacozy-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/tea-cozy/" target="_blank">Tea Cozy</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/tea-cozy" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>Home page for a small chain of tea rooms.</br>
 									Made for the Codecademy Build Websites from Scratch course.</p>
 								</div>
 							</div>
-							<div id="tortoiseshell-overlay" class="image-overlay">
-								<h2>Web - Personal&nbsp;Projects</h2>
-								<h3><a href="https://stuart-mayhew.github.io/tortoiseshell-optics/" target="_blank">Tortoiseshell Optics</a></h3>
-								<div class="chevron-overlay-container">
+							<div class="image-container flex  offset-right">
+								<img id="teacozy-img" class="image offscreen" src="./resources/img/website-sample-img/tea-cozy.jpg"/>
+							</div>
+            </div>
+            <div id="tortoiseshell" class="project-container">
+              <div id="tortoiseshell-overlay" class="image-overlay no-display">
+								<h3 class="title-container"><a href="https://stuart-mayhew.github.io/tortoiseshell-optics/" target="_blank">Tortoiseshell Optics</a></h3>
+								<div class="chevron-overlay-container text-container">
 									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
 									<a href="https://github.com/Stuart-Mayhew/tortoiseshell-optics" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
 									<p>Home page for a modern optics website.</br>
 									Made for the Codecademy Build Websites from Scratch course.</p>
 								</div>
 							</div>
-						</div>
-						<div class="portfolio-images">
-							<img id="colmar" class="image" src="./resources/img/website-sample-img/colmar-academy.jpg"/>
-							<img id="dasmotos" class="image" src="./resources/img/website-sample-img/dasmotos.jpg"/>
-							<img id="destination" class="image" src="./resources/img/website-sample-img/destination.jpg"/>
-							<img id="excursion" class="image" src="./resources/img/website-sample-img/excursion.jpg"/>
-							<img id="my-times" class="image" src="./resources/img/website-sample-img/my-times.jpg"/>
-							<img id="tea-cozy" class="image" src="./resources/img/website-sample-img/tea-cozy.jpg"/>
-							<img id="tortoiseshell" class="image" src="./resources/img/website-sample-img/tortoiseshell-optics.jpg"/>
+							<div class="image-container flex offset-right">
+								<img id="tortoiseshell-img" class="image offscreen" src="./resources/img/website-sample-img/tortoiseshell-optics.jpg"/>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row row-two">
-					<div id="other-coding" class="category">
-						<div class="image-overlays">
-							<div id="match-game-overlay" class="image-overlay">
-								<h3 class="small-overlay-text">Coding - Personal&nbsp;Projects</h3>
-								<h4 class="small-overlay-text"><a href="https://stuart-mayhew.github.io/match-game/" target="_blank">Match Game</a></h4>
-								<div class="chevron-overlay-container">
-									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
-									<a href="https://github.com/Stuart-Mayhew/match-game" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-									<p class="small-overlay-text">A simple matching card game made as an exercise in javascript and jquery.</p>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-images">
-							<img id="match-game" class="image" src="./resources/img/coding-sample-img/match-game-cropped.jpg"/>
-						</div>
-					</div>
-					<div id="other-design" class="category">
-						<div class="image-overlays">
-							<div id="tau-overlay" class="image-overlay">
-								<h3>Previous Design&nbsp;Projects</h3>
-								<h4><a href="./resources/img/old-design-sample-img/Tau.jpg" target="_blank">Tau</a></h4>
-								<div class="chevron-overlay-container">
-									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
-									<p>The final prototype for a pendant light that utilises negative space.</p>
-								</div>
-							</div>
-							<div id="lattice-overlay" class="image-overlay">
-								<h3>Previous Design&nbsp;Projects</h3>
-								<h4><a href="./resources/img/old-design-sample-img/lattice.jpg" target="_blank">Lattice</a></h4>
-								<div class="chevron-overlay-container">
-									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
-									<p>Various drawings from a project to design hotel lobby furniture.</p>
-								</div>
-							</div>
-							<div id="paris-overlay" class="image-overlay">
-								<h3>Previous Design&nbsp;Projects</h3>
-								<h4><a href="./resources/img/old-design-sample-img/paris-pg-1.jpg" target="_blank">Paris</a></h4>
-								<div class="chevron-overlay-container">
-									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
-									<p>A page from a short comic that records a student trip to Paris.</p>
-								</div>
-							</div>
-							<div id="ti-mi-overlay" class="image-overlay">
-								<h3>Previous Design&nbsp;Projects</h3>
-								<h4><a href="./resources/img/old-design-sample-img/Ti-mi.jpg" target="_blank">Ti-mi</a></h4>
-								<div class="chevron-overlay-container">
-									<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
-									<p>A project to create a concept for a modern teasmade using AutoCAD and Solidworks.</p>
-								</div>
-							</div>
-						</div>
-						<div class="portfolio-images">
-								<img id="tau" class="image" src="./resources/img/old-design-sample-img/Tau.jpg"/>
-								<img id="lattice" class="image" src="./resources/img/old-design-sample-img/lattice.jpg"/>
-								<img id="paris" class="image" src="./resources/img/old-design-sample-img/paris-pg-1.jpg"/>
-								<img id="ti-mi" class="image" src="./resources/img/old-design-sample-img/Ti-mi.jpg"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 	crossorigin="anonymous"></script>
-		<script src="./resources/js/jquery-migrate-3.0.1.min.js"></script>
+          <div id="othercoding" class="category flex full-height">
+						<h2 class="title-container" class="small-overlay-text">Coding - Personal&nbsp;Projects</h2>
+						<div class="button-container flex">
+							<div id="matchgame-button" class="button active"></div>
+						</div>
+						<div id="othercoding-projects"class="projects-container">
+              <div id="matchgame" class="project-container ">
+								<div id="matchgame-overlay" class="image-overlay">
+                  <h3 class="title-container"><a href="https://stuart-mayhew.github.io/match-game/" target="_blank">Match Game</a></h3>
+                  <div class="chevron-overlay-container text-container">
+                    <i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
+                    <a href="https://github.com/Stuart-Mayhew/match-game" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                    <p class="small-overlay-text">A simple matching card game made as an exercise in javascript and jquery.</p>
+                  </div>
+              </div>
+							<div class="image-container flex offset-left">
+                <img id="match-game-img" class="image " src="./resources/img/coding-sample-img/match-game-cropped.jpg"/>
+            	</div>
+						</div>
+					</div>
+				</div>
+				<div id="otherdesign" class="category flex full-height">
+					<h2 class="title-container">Previous Design&nbsp;Projects</h2>
+					<div class="button-container flex">
+						<div id="tau-button" class="button active"></div>
+						<div id="lattice-button" class="button"></div>
+						<div id="paris-button" class="button"></div>
+						<div id="timi-button" class="button"></div>
+					</div>
+					<div id="otherdesign-projects" class="projects-container">
+          <div id="tau" class="project-container ">
+						<div id="tau-overlay" class="image-overlay display">
+							<h3 class="title-container"><a href="./resources/img/old-design-sample-img/Tau.jpg" target="_blank">Tau</a></h3>
+							<div class="chevron-overlay-container text-container">
+								<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
+								<p>The final prototype for a pendant light that utilises negative space.</p>
+							</div>
+						</div>
+						<div class="image-container  offset-right">
+            	<img id="tau-img" class="image offset-right onscreen" src="./resources/img/old-design-sample-img/Tau.jpg"/>
+						</div>
+          </div>
+          <div id="lattice" class="project-container ">
+						<div id="lattice-overlay" class="image-overlay no-display">
+							<h3 class="title-container"><a href="./resources/img/old-design-sample-img/lattice.jpg" target="_blank">Lattice</a></h3>
+							<div class="chevron-overlay-container text-container">
+								<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
+								<p>Various drawings from a project to design hotel lobby furniture.</p>
+							</div>
+						</div>
+						<div class="image-container offset-right">
+							<img id="lattice-img" class="image offscreen" src="./resources/img/old-design-sample-img/lattice.jpg"/>
+						</div>
+          </div>
+          <div id="paris" class="project-container ">
+            <div id="paris-overlay" class="image-overlay no-display">
+							<h3 class="title-container"><a href="./resources/img/old-design-sample-img/paris-pg-1.jpg" target="_blank">Paris</a></h3>
+							<div class="chevron-overlay-container text-container">
+								<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
+								<p>A page from a short comic that records a student trip to Paris.</p>
+							</div>
+						</div>
+						<div class="image-container offset-right">
+							<img id="paris-img" class="image  offscreen" src="./resources/img/old-design-sample-img/paris-pg-1.jpg"/>
+						</div>
+					</div>
+          <div id="timi" class="project-container ">
+						<div id="timi-overlay" class="image-overlay no-display">
+							<h3 class="title-container"><a href="./resources/img/old-design-sample-img/Ti-mi.jpg" target="_blank">Ti-mi</a></h3>
+							<div class="chevron-overlay-container text-container">
+								<i class="fa fa-chevron-down fa-lg overlay-chevron" aria-hidden="true"></i>
+								<p>A project to create a concept for a modern teasmade using AutoCAD and Solidworks.</p>
+							</div>
+						</div>
+						<div class="image-container offset-right">
+	          	<img id="timi-img" class="image offscreen" src="./resources/img/old-design-sample-img/Ti-mi.jpg"/>
+						</div>
+          </div>
+				</div>
+      </div>
+    </div>
 		<script src="https://use.fontawesome.com/5357d5ad66.js"></script>
-    <script type="text/javascript" src="./resources/slick/slick.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.js" type="text/javascript"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.js" type="text/javascript"></script>
-		<script type="text/javascript">
-		//<![CDATA[
-			//adjusts section of choice's height to the screen height
-			const containerHeightAdjust = (div) => {
-				let newHeight = $(window).height() - 40;
-				if (div === "#portfolio") {
-					if ($(window).height() < 750 ||
-					  $(window).height() > $(window).width()) {
-						$(div).css("height", "auto");
-					} else {
-						$(div).height(newHeight);
-					}
-				} else {
-					$(div).height(newHeight);
-				}
-			};
-			//changes content of #portfolio to landscape or portrait depending on orientation and size of screen
-			const categoryWidthAdjust = () => {
-				if ($(window).height() > $(window).width()) {
-					$("#categories").css({"flex-direction":"column", "padding":"0"});
-					$(".row").css({"flex-direction": "column", "width": "100%"});
-					$(".category").css({"width": "auto","border-width":"0.5rem"});
-					$(".row-two .category:first").css({"border-top-width":"0.25rem", "border-bottom-width":"0.25rem"});
-					$(".row-two .category:last").css({"border-top-width":"0.25rem"})
-					$('#practice').css({"border-bottom-width":"0.25rem"});
-				} else if ($(window).height() <= 750) {
-					$("#categories").css({"flex-direction":"column", "padding":"0"});
-					$(".row").css({"flex-direction": "row", "width": "100%"});
-					$(".category").css({"border-width":"0.5rem"});
-					$(".row-two .category:first").css({"border-top-width":"0.25rem", "border-right-width":"0.25rem"});
-					$(".row-two .category:last").css({"border-top-width":"0.25rem", "border-left-width":"0.25rem"});
-					$(".row-two .category").css({"width":"50%"});
-					$('#practice').css({"width": "100%", "border-bottom-width":"0.25rem"});
-				}	else {
-					$("#categories").css({"flex-direction":"row", "padding":"0 2rem"});
-					$(".row").css({"flex-direction": "row", "width": "50%"});
-					$(".row-two").css({"flex-direction":"column"});
-					$(".category").css({"width": "100%", "border-width":"0.5rem"});
-					$(".row-two .category:first").css({"border-bottom-width":"0.25rem", "border-left-width":"0.25rem"});
-					$(".row-two .category:last").css({"border-top-width":"0.25rem", "border-left-width":"0.25rem"});
-					$(".category").css({"width": "100%"});
-					$('#practice').css({"border-right-width":"0.25rem"});
-				};
-			};
-			/*makes the categories within the portfolio section squares when below width prescribed in an @media on #categories that determines its flex-direction, otherwise the categories are columns*/
-				const categoryHeightAdjust = (div) => {
-				let newHeight = $(div).width();
-				if ($(window).height() > $(window).width()) { //makes .category a square
-					$(div).height(newHeight);
-					$('.row').height("auto");
-					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-lg');
-					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-2x');
-				} else if ($(window).height() <= 750) { //makes .category a square that is half the height of the row and half the width of the screen
-					$(div).height(newHeight / 2);
-					$('.row').height("auto");
-					$(".row").css("width","100%");
-					$("#categories").css("flex-direction","column");
-					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-lg');
-					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-2x');
-				} else { //makes .category columns that take up the height of the row
-					$('.row').height("80vh");
-					$(div).css("height","50%");
-					$('#practice').css("height","100%");
-					$('#contact-close, .overlay-chevron, .fa-github').removeClass('fa-2x');
-					$('#contact-close, .overlay-chevron, .fa-github').addClass('fa-lg');
-				};
-			};
-			/*changes multiple css rules in #banner depending on whether the screen is portrait or landscape*/
-			const bannerOrientation = () => {
-				if ($("#banner").height() > $("#banner").width()) {
-					$("#banner").css({"flex-direction": "column-reverse", "justify-content": "center"});
-					$("#portrait").css("margin","0 0 2.5rem 0");
-					let bannerTextWidth = $("#banner .title-container").width();
-					$("#portrait").width(bannerTextWidth);
-					$("#banner .title-container").css("margin","0");
-					//ensures that #portrait toggles correctly on transition from landscape to portrait views
-					if ($('#about-chevron').hasClass('fa-chevron-up')) {
-						$('#portrait').css('display','none');
-					} else if ($('#about-chevron').hasClass('fa-chevron-down') && $(window).height() <= 575) {
-						$('#portrait').css('display','none');
-					} else if ($('#about-chevron').hasClass('fa-chevron-down') && $(window).height() > 575) {
-						$('#portrait').css('display','block');
-					};
-				} else {
-					$("#banner").css({"flex-direction": "row", "justify-content": "space-around"});
-					$("#portrait").css({"margin":"0 5rem 0 0","display":"block"});
-					$("#portrait").width("25%");
-					$("#banner .title-container").css("margin","0 0 0 5rem");
-				};
-			};
-			//resets width of overlays when switching views/window resolution
-			const rowOneOverlaySizeReset = ($overlay) => {
-				$($overlay).width($('.row-one .portfolio-images').width() - 8);
-				($($overlay).height('auto'));
-			};
-			const rowTwoOverlaySizeReset = ($overlay) => {
-				$($overlay).width($('.row-two .portfolio-images').width() - 8);
-				($($overlay).height('auto'));
-			};
-
-
-			$(document).ready(function(){
-				//activates function on website load
-				window.onload = function(){
-					containerHeightAdjust("#banner");
-					containerHeightAdjust("#portfolio");
-					categoryWidthAdjust();
-					categoryHeightAdjust(".category");
-					bannerOrientation();
-					rowOneOverlaySizeReset('.row-one .image-overlay, .row-one .image-overlay > *');
-					rowTwoOverlaySizeReset('.row-two .image-overlay, .row-two .image-overlay > *');
-				};
-				//activates functions on screen resize
-				window.onresize = function(){
-					containerHeightAdjust("#banner");
-					containerHeightAdjust("#portfolio");
-					categoryWidthAdjust();
-					categoryHeightAdjust(".category");
-					bannerOrientation();
-					rowOneOverlaySizeReset('.row-one .image-overlay, .row-one .image-overlay > *');
-					rowTwoOverlaySizeReset('.row-two .image-overlay, .row-two .image-overlay > *');
-				};
-
-				//toggles showing of #contacts banner
-				$(function() {
-					$('#contact-link, #contact-close').click(function() {
-						$('#contact').slideToggle(250)
-					});
-				});
-
-				//toggles showing of about text in banner, direction of chevron, and #portrait dissappears if screen is in portrait mode
-				$(function() {
-					$('#about-chevron').click(function() {
-						if ($(this).hasClass('fa-chevron-down')) {
-							$(this).toggleClass("fa-chevron-down fa-chevron-up");
-							$(this).parent().find("p").slideToggle(400);
-							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575 && $('#portrait').css('display','block')) {
-								$('#portrait').toggle(400);
-							};
-						} else if ($(this).hasClass('fa-chevron-up')) {
-							$(this).toggleClass("fa-chevron-down fa-chevron-up");
-							$(this).parent().find("p").slideToggle(400);
-							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575 && $('#portrait').css('display','none')) {
-								$('#portrait').toggle(400);
-							};
-						};
-					});
-				});
-
-			//activates slow scroll (uses plugins)
-				$(function() {
-	   			$('nav').localScroll({duration:800});
-				});
-
-			//extends about-container in the banner and changes the chevron direction when the about link in the nav bar is clicked
-				$(function() {
-					$('#about-link').click(function() {
-						if ($('#about-chevron').hasClass('fa-chevron-down')) {
-							$('#about-chevron').toggleClass('fa-chevron-down fa-chevron-up');
-							$('#about-chevron').parent().find("p").delay(400).slideToggle(800);
-							if ($("#banner").height() > $("#banner").width() && $(window).height() >= 575  && $('#portrait').css('display','block')) {
-								$('#portrait').delay(400).toggle(800);
-							};
-						} else {
-							$('#about-container').fadeTo(400,0.1).fadeTo(400,1).fadeIn(400);
-						};
-					});
-			//implements slick slideshows within portfolio-images
-				$('.portfolio-images').slick({
-	        infinite: false,
-	        slidesToShow: 1,
-	        slidesToScroll: 1,
-	        speed: 1500,
-					variableWidth: true,
-					cssEase: 'ease-in-out',
-					centerMode: true,
-					lazyLoad: 'ondemand',
-	      });
-			$('.image-overlay').hide();
-			//listens for attribute changes
-			(function($) {
-			    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-
-			    $.fn.attrchange = function(callback) {
-			        if (MutationObserver) {
-			            var options = {
-			                subtree: false,
-			                attributes: true
-			            };
-
-			            var observer = new MutationObserver(function(mutations) {
-			                mutations.forEach(function(e) {
-			                    callback.call(e.target, e.attributeName);
-			                });
-			            });
-
-			            return this.each(function() {
-			                observer.observe(this, options);
-			            });
-
-			        }
-			    }
-			})(jQuery);
-				//listens to class changes on slick images and hides overlays when image no longer focused
-			$('.image').attrchange(function(attrName) {
-					let $hoverId = $(this).attr('id');
-			    if (attrName=='class'){
-						$('.image-overlay').stop(true);
-						$('.image-overlay').slideUp();
-					};
-				});
-			//allows image-overlays to show on appropriate hover
-			$('.slick-list').hover(function() {
-				let $hoverId = $(this).find('.slick-current').attr('id');
-				$('#' + $hoverId + '-overlay').stop(true);
-				$('#' + $hoverId + '-overlay').slideDown(250);
-			});
-			$('.slick-list').mouseleave(function() {
-				let $hoverId = $(this).find('.slick-current').attr('id');
-				$('#' + $hoverId + '-overlay').delay(250).slideUp(250);
-			});
-			$('.slick-list').click(function() {
-				let $hoverId = $(this).find('.slick-current').attr('id');
-				$('#' + $hoverId + '-overlay').stop(true);
-				$('#' + $hoverId + '-overlay').slideDown(250);
-			});
-
-			$('.image-overlay').hover(function() {
-				$(this).stop(true);
-				$(this).slideDown(250);
-
-			});
-			$('.image-overlay').mouseleave(function() {
-				$(this).find('i').removeClass('fa-chevron-up');
-				$(this).find('i').addClass('fa-chevron-down');
-				$(this).find("p").slideUp(250);
-				$(this).delay(50).slideUp(250);
-			});
-		//toggles showing of text on image overlays and direction of chevron
-			$('.overlay-chevron').click(function() {
-				$(this).toggleClass("fa-chevron-down fa-chevron-up");
-				$(this).parent().find("p").slideToggle(250);
-			});
-	  });
-	});
-
-			//]]>
-		</script>
+		<script src="resources/scripts/buttons.js"></script>
 	</body>
 </html>

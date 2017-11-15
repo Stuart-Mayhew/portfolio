@@ -1,0 +1,38 @@
+JavaScript Rules
+----------------
+- Use native javascript throughout
+- no styling in javascript
+- make javascript a different file
+- compile es6 javascript to es5 for compatibility
+
+CSS Rules
+---------
+- don't style ids
+- use css gradients for banner backgrounds instead of image
+
+
+styling
+Poppins 16px default
+
+Colors:
+  --nav-bg-color: 	#fff;
+  --main-bg-color: 	#fff;
+  --sub-bg-color: 	#BBC5C9;
+  --heading-color: 	#285FA8;
+  --text-color: 	#474B4F;
+  --extra-color: 	#3C3B45;
+  --shadow-color: 	rgba(60, 59, 69, 0.5);
+
+font sizes:
+Universal: 		16px
+Universal-small:	13px
+h1:			4rem;
+h2:			2rem;
+h3:			1.5rem;
+h4:			1.2rem
+p:			0.9rem;
+
+
+
+
+
